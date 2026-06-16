@@ -7,8 +7,17 @@
 
 # Vivado project generated directories
 *.cache/
-*.gen/
 *.hw/
+
+# Ignore generated content in .gen except module_ref IP-XACT files
+*.gen/*
+!*.gen/sources_1/
+*.gen/sources_1/*
+!*.gen/sources_1/bd/
+*.gen/sources_1/bd/*
+!*.gen/sources_1/bd/mref/
+!*.gen/sources_1/bd/mref/**
+
 *.ip_user_files/
 *.runs/
 *.sim/
