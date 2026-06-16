@@ -9,7 +9,7 @@
 *.cache/
 *.hw/
 
-# Ignore generated content in .gen except module_ref IP-XACT files
+# Ignore generated content in .gen except needed IP and design files
 *.gen/*
 !*.gen/sources_1/
 *.gen/sources_1/*
@@ -17,8 +17,15 @@
 *.gen/sources_1/bd/*
 !*.gen/sources_1/bd/mref/
 !*.gen/sources_1/bd/mref/**
+!*.gen/sources_1/bd/design_3/
+!*.gen/sources_1/bd/design_3/**
 
-*.ip_user_files/
+*.ip_user_files/*
+!*.ip_user_files/bd/
+*.ip_user_files/bd/*
+!*.ip_user_files/bd/design_3/
+!*.ip_user_files/bd/design_3/**
+
 *.runs/
 *.sim/
 
@@ -32,8 +39,3 @@ myproj/
 # Generated within block design dirs
 **/ui/
 **/imports/
-
-# Ignore generated IP build artifacts but track .xci config files
-**/ip/**/*
-!**/ip/**/*.xci
-!**/ip/**/
