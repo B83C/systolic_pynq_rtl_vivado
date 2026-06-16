@@ -1,0 +1,26 @@
+# Vivado logs
+*.jou
+*.log
+
+# Vivado cache directory
+.Xil/
+
+# Vivado project generated directories
+*.cache/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+
+# Backup files
+*.backup.jou
+*.backup.log
+
+# Vivado sub-projects
+myproj/
+
+# Generated within block design dirs
+**/ip/
+**/ui/
+**/imports/
