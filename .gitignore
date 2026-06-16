@@ -21,6 +21,10 @@
 myproj/
 
 # Generated within block design dirs
-**/ip/
 **/ui/
 **/imports/
+
+# Ignore generated IP build artifacts but track .xci config files
+**/ip/**/*
+!**/ip/**/*.xci
+!**/ip/**/
