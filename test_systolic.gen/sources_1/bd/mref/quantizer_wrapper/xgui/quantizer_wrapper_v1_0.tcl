@@ -6,6 +6,10 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "ACCUM_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "DATA_WIDTH_IN" -parent ${Page_0}
   ipgui::add_param $IPINST -name "DATA_WIDTH_OUT" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "MAX_MUL_Q" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "MAX_SHIFT" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "MAX_ZP_OUT" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "MIN_ZP_OUT" -parent ${Page_0}
   ipgui::add_param $IPINST -name "SIZE" -parent ${Page_0}
 
 
@@ -38,6 +42,42 @@ proc validate_PARAM_VALUE.DATA_WIDTH_OUT { PARAM_VALUE.DATA_WIDTH_OUT } {
 	return true
 }
 
+proc update_PARAM_VALUE.MAX_MUL_Q { PARAM_VALUE.MAX_MUL_Q } {
+	# Procedure called to update MAX_MUL_Q when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.MAX_MUL_Q { PARAM_VALUE.MAX_MUL_Q } {
+	# Procedure called to validate MAX_MUL_Q
+	return true
+}
+
+proc update_PARAM_VALUE.MAX_SHIFT { PARAM_VALUE.MAX_SHIFT } {
+	# Procedure called to update MAX_SHIFT when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.MAX_SHIFT { PARAM_VALUE.MAX_SHIFT } {
+	# Procedure called to validate MAX_SHIFT
+	return true
+}
+
+proc update_PARAM_VALUE.MAX_ZP_OUT { PARAM_VALUE.MAX_ZP_OUT } {
+	# Procedure called to update MAX_ZP_OUT when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.MAX_ZP_OUT { PARAM_VALUE.MAX_ZP_OUT } {
+	# Procedure called to validate MAX_ZP_OUT
+	return true
+}
+
+proc update_PARAM_VALUE.MIN_ZP_OUT { PARAM_VALUE.MIN_ZP_OUT } {
+	# Procedure called to update MIN_ZP_OUT when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.MIN_ZP_OUT { PARAM_VALUE.MIN_ZP_OUT } {
+	# Procedure called to validate MIN_ZP_OUT
+	return true
+}
+
 proc update_PARAM_VALUE.SIZE { PARAM_VALUE.SIZE } {
 	# Procedure called to update SIZE when any of the dependent parameters in the arguments change
 }
@@ -66,5 +106,25 @@ proc update_MODELPARAM_VALUE.DATA_WIDTH_OUT { MODELPARAM_VALUE.DATA_WIDTH_OUT PA
 proc update_MODELPARAM_VALUE.ACCUM_WIDTH { MODELPARAM_VALUE.ACCUM_WIDTH PARAM_VALUE.ACCUM_WIDTH } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.ACCUM_WIDTH}] ${MODELPARAM_VALUE.ACCUM_WIDTH}
+}
+
+proc update_MODELPARAM_VALUE.MAX_MUL_Q { MODELPARAM_VALUE.MAX_MUL_Q PARAM_VALUE.MAX_MUL_Q } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.MAX_MUL_Q}] ${MODELPARAM_VALUE.MAX_MUL_Q}
+}
+
+proc update_MODELPARAM_VALUE.MAX_SHIFT { MODELPARAM_VALUE.MAX_SHIFT PARAM_VALUE.MAX_SHIFT } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.MAX_SHIFT}] ${MODELPARAM_VALUE.MAX_SHIFT}
+}
+
+proc update_MODELPARAM_VALUE.MAX_ZP_OUT { MODELPARAM_VALUE.MAX_ZP_OUT PARAM_VALUE.MAX_ZP_OUT } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.MAX_ZP_OUT}] ${MODELPARAM_VALUE.MAX_ZP_OUT}
+}
+
+proc update_MODELPARAM_VALUE.MIN_ZP_OUT { MODELPARAM_VALUE.MIN_ZP_OUT PARAM_VALUE.MIN_ZP_OUT } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.MIN_ZP_OUT}] ${MODELPARAM_VALUE.MIN_ZP_OUT}
 }
 

@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Mon Jun 15 19:21:25 2026
+-- Date        : Tue Jun 16 13:19:44 2026
 -- Host        : g7-station running 64-bit CachyOS
 -- Command     : write_vhdl -force -mode synth_stub
---               /home/b83c/vivado/test_systolic/test_systolic.gen/sources_1/bd/design_3/ip/design_3_processing_system7_0_0/design_3_processing_system7_0_0_stub.vhdl
+--               /home/b83c/git/systolic/test_systolic/test_systolic.gen/sources_1/bd/design_3/ip/design_3_processing_system7_0_0/design_3_processing_system7_0_0_stub.vhdl
 -- Design      : design_3_processing_system7_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
@@ -237,7 +237,7 @@ architecture stub of design_3_processing_system7_0_0 is
   attribute X_INTERFACE_INFO of M_AXI_GP0_RDATA : signal is "xilinx.com:interface:aximm:1.0 M_AXI_GP0 RDATA";
   attribute X_INTERFACE_INFO of S_AXI_HP0_ARREADY : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HP0 ARREADY";
   attribute X_INTERFACE_MODE of S_AXI_HP0_ARREADY : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of S_AXI_HP0_ARREADY : signal is "XIL_INTERFACENAME S_AXI_HP0, NUM_WRITE_OUTSTANDING 8, NUM_READ_OUTSTANDING 8, DATA_WIDTH 64, PROTOCOL AXI3, FREQ_HZ 100000000, ID_WIDTH 6, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, MAX_BURST_LENGTH 16, PHASE 0.0, CLK_DOMAIN design_3_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of S_AXI_HP0_ARREADY : signal is "XIL_INTERFACENAME S_AXI_HP0, NUM_WRITE_OUTSTANDING 8, NUM_READ_OUTSTANDING 8, DATA_WIDTH 64, PROTOCOL AXI3, FREQ_HZ 100000000, ID_WIDTH 6, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 16, PHASE 0.0, CLK_DOMAIN design_3_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of S_AXI_HP0_AWREADY : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HP0 AWREADY";
   attribute X_INTERFACE_INFO of S_AXI_HP0_BVALID : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HP0 BVALID";
   attribute X_INTERFACE_INFO of S_AXI_HP0_RLAST : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HP0 RLAST";
@@ -337,7 +337,7 @@ architecture stub of design_3_processing_system7_0_0 is
   attribute X_INTERFACE_INFO of S_AXI_HP2_WSTRB : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HP2 WSTRB";
   attribute X_INTERFACE_INFO of FCLK_CLK0 : signal is "xilinx.com:signal:clock:1.0 FCLK_CLK0 CLK";
   attribute X_INTERFACE_MODE of FCLK_CLK0 : signal is "master";
-  attribute X_INTERFACE_PARAMETER of FCLK_CLK0 : signal is "XIL_INTERFACENAME FCLK_CLK0, FREQ_HZ 1e+08, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_3_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of FCLK_CLK0 : signal is "XIL_INTERFACENAME FCLK_CLK0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_3_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of FCLK_RESET0_N : signal is "xilinx.com:signal:reset:1.0 FCLK_RESET0_N RST";
   attribute X_INTERFACE_MODE of FCLK_RESET0_N : signal is "master";
   attribute X_INTERFACE_PARAMETER of FCLK_RESET0_N : signal is "XIL_INTERFACENAME FCLK_RESET0_N, POLARITY ACTIVE_LOW, INSERT_VIP 0";

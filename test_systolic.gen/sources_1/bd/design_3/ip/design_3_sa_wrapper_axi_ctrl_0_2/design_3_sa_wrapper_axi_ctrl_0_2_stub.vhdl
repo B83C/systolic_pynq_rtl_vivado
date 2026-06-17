@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Mon Jun 15 19:47:16 2026
+-- Date        : Wed Jun 17 09:22:38 2026
 -- Host        : g7-station running 64-bit CachyOS
 -- Command     : write_vhdl -force -mode synth_stub
---               /home/b83c/vivado/test_systolic/test_systolic.gen/sources_1/bd/design_3/ip/design_3_sa_wrapper_axi_ctrl_0_2/design_3_sa_wrapper_axi_ctrl_0_2_stub.vhdl
+--               /home/b83c/git/systolic/test_systolic/test_systolic.gen/sources_1/bd/design_3/ip/design_3_sa_wrapper_axi_ctrl_0_2/design_3_sa_wrapper_axi_ctrl_0_2_stub.vhdl
 -- Design      : design_3_sa_wrapper_axi_ctrl_0_2
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
@@ -27,7 +27,7 @@ entity design_3_sa_wrapper_axi_ctrl_0_2 is
     m_axis_tlast : out STD_LOGIC;
     s_axil_awvalid : in STD_LOGIC;
     s_axil_awready : out STD_LOGIC;
-    s_axil_awaddr : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    s_axil_awaddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
     s_axil_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axil_wvalid : in STD_LOGIC;
     s_axil_wready : out STD_LOGIC;
@@ -36,26 +36,17 @@ entity design_3_sa_wrapper_axi_ctrl_0_2 is
     s_axil_bready : in STD_LOGIC;
     s_axil_arvalid : in STD_LOGIC;
     s_axil_arready : out STD_LOGIC;
-    s_axil_araddr : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    s_axil_araddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
     s_axil_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axil_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axil_rvalid : out STD_LOGIC;
-    s_axil_rready : in STD_LOGIC;
-    a_bypass : out STD_LOGIC;
-    axis_bypass : out STD_LOGIC;
-    idle : out STD_LOGIC;
-    o_mul_q : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    o_shift : out STD_LOGIC_VECTOR ( 4 downto 0 );
-    o_zp_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    o_zp_in : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    o_out_channels : out STD_LOGIC_VECTOR ( 6 downto 0 );
-    o_repeat_cnt : out STD_LOGIC_VECTOR ( 4 downto 0 )
+    s_axil_rready : in STD_LOGIC
   );
 
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of design_3_sa_wrapper_axi_ctrl_0_2 : entity is "design_3_sa_wrapper_axi_ctrl_0_2,sa_wrapper_axi_ctrl,{}";
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_3_sa_wrapper_axi_ctrl_0_2 : entity is "design_3_sa_wrapper_axi_ctrl_0_2,sa_wrapper_axi_ctrl,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=sa_wrapper_axi_ctrl,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,A_DEPTH=8,C_DEPTH=8,ACCUM_WIDTH=32,SIZE=8,DATA_WIDTH_IN=8,DATA_WIDTH_OUT=32}";
+  attribute CORE_GENERATION_INFO of design_3_sa_wrapper_axi_ctrl_0_2 : entity is "design_3_sa_wrapper_axi_ctrl_0_2,sa_wrapper_axi_ctrl,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=sa_wrapper_axi_ctrl,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,A_DEPTH=64,C_DEPTH=8,ACCUM_WIDTH=32,SIZE=8,DATA_WIDTH_IN=8,DATA_WIDTH_OUT=32}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_3_sa_wrapper_axi_ctrl_0_2 : entity is "yes";
   attribute IP_DEFINITION_SOURCE : string;
@@ -66,7 +57,7 @@ architecture stub of design_3_sa_wrapper_axi_ctrl_0_2 is
   attribute syn_black_box : boolean;
   attribute black_box_pad_pin : string;
   attribute syn_black_box of stub : architecture is true;
-  attribute black_box_pad_pin of stub : architecture is "clk,rst_n,s_axis_B_tdata[63:0],s_axis_B_tvalid,s_axis_B_tready,s_axis_B_tlast,m_axis_tdata[255:0],m_axis_tvalid,m_axis_tready,m_axis_tlast,s_axil_awvalid,s_axil_awready,s_axil_awaddr[5:0],s_axil_wdata[31:0],s_axil_wvalid,s_axil_wready,s_axil_bresp[1:0],s_axil_bvalid,s_axil_bready,s_axil_arvalid,s_axil_arready,s_axil_araddr[5:0],s_axil_rdata[31:0],s_axil_rresp[1:0],s_axil_rvalid,s_axil_rready,a_bypass,axis_bypass,idle,o_mul_q[15:0],o_shift[4:0],o_zp_out[7:0],o_zp_in[7:0],o_out_channels[6:0],o_repeat_cnt[4:0]";
+  attribute black_box_pad_pin of stub : architecture is "clk,rst_n,s_axis_B_tdata[63:0],s_axis_B_tvalid,s_axis_B_tready,s_axis_B_tlast,m_axis_tdata[255:0],m_axis_tvalid,m_axis_tready,m_axis_tlast,s_axil_awvalid,s_axil_awready,s_axil_awaddr[6:0],s_axil_wdata[31:0],s_axil_wvalid,s_axil_wready,s_axil_bresp[1:0],s_axil_bvalid,s_axil_bready,s_axil_arvalid,s_axil_arready,s_axil_araddr[6:0],s_axil_rdata[31:0],s_axil_rresp[1:0],s_axil_rvalid,s_axil_rready";
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_MODE : string;
@@ -90,7 +81,7 @@ architecture stub of design_3_sa_wrapper_axi_ctrl_0_2 is
   attribute X_INTERFACE_INFO of m_axis_tlast : signal is "xilinx.com:interface:axis:1.0 m_axis TLAST";
   attribute X_INTERFACE_INFO of s_axil_awvalid : signal is "xilinx.com:interface:aximm:1.0 s_axil AWVALID";
   attribute X_INTERFACE_MODE of s_axil_awvalid : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of s_axil_awvalid : signal is "XIL_INTERFACENAME s_axil, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 6, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN design_3_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s_axil_awvalid : signal is "XIL_INTERFACENAME s_axil, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 7, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN design_3_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axil_awready : signal is "xilinx.com:interface:aximm:1.0 s_axil AWREADY";
   attribute X_INTERFACE_INFO of s_axil_awaddr : signal is "xilinx.com:interface:aximm:1.0 s_axil AWADDR";
   attribute X_INTERFACE_INFO of s_axil_wdata : signal is "xilinx.com:interface:aximm:1.0 s_axil WDATA";
